@@ -1,8 +1,26 @@
 const WHATSAPP = "923225118889";
-
-// 🔴 Replace this
 const GOOGLE = "https://calendar.google.com/calendar/appointments/schedules/YOUR_LINK";
 
+// Language switch
+function setLang(lang) {
+    document.querySelectorAll("[data-en]").forEach(el => {
+        el.innerText = el.getAttribute(`data-${lang}`);
+    });
+
+    document.documentElement.lang = lang;
+
+    // RTL for Urdu
+    if (lang === "ur") {
+        document.body.style.direction = "rtl";
+    } else {
+        document.body.style.direction = "ltr";
+    }
+}
+
+// Default language
+setLang("en");
+
+// Modal
 const modal = document.getElementById("modal");
 
 function openModal() {
@@ -17,6 +35,7 @@ window.onclick = (e) => {
     if (e.target === modal) closeModal();
 };
 
+// Form
 document.getElementById("form").addEventListener("submit", function(e){
     e.preventDefault();
 
@@ -25,17 +44,15 @@ document.getElementById("form").addEventListener("submit", function(e){
     const type = document.getElementById("type").value;
     const msg = document.getElementById("msg").value;
 
-    const text = `Appointment Request:
+    const text = `Appointment:
 Name: ${name}
 Phone: ${phone}
 Type: ${type}
-Issue: ${msg || "N/A"}`;
+Message: ${msg}`;
 
     const encoded = encodeURIComponent(text);
 
-    const choice = confirm("OK = WhatsApp\nCancel = Google Booking");
-
-    if(choice){
+    if(confirm("OK = WhatsApp | Cancel = Calendar")){
         window.open(`https://wa.me/${WHATSAPP}?text=${encoded}`, "_blank");
     } else {
         window.open(GOOGLE, "_blank");
