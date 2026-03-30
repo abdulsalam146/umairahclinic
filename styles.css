@@ -1551,3 +1551,61 @@ body[dir="rtl"] .timeline-dot {
     left: auto;
     right: 2px;
 }
+/* =========================================
+   STICKY MOBILE CTA
+========================================= */
+
+.sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    z-index: 2000;
+    background: white;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.08);
+}
+
+.cta-btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border-right: 1px solid var(--border-color);
+}
+
+.cta-btn:last-child {
+    border-right: none;
+}
+
+.cta-btn.call {
+    background: #f8fafc;
+    color: var(--secondary-color);
+}
+
+.cta-btn.whatsapp {
+    background: var(--whatsapp-color);
+    color: white;
+}
+
+.cta-btn.book {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+    .sticky-cta {
+        display: flex;
+    }
+
+    body {
+        padding-bottom: 70px; /* prevent overlap */
+    }
+}
