@@ -5,110 +5,125 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Best Gynecologist in Rawalpindi | ڈاکٹر عمیرہ یعقوب</title>
+<title>Dr Umairah Yaqub | Gynecologist Rawalpindi Islamabad Gujar Khan</title>
 
-<meta name="description" content="Best gynecologist in Rawalpindi, Islamabad & Gujar Khan. Pregnancy, infertility, women health, خواتین کے مسائل, ماں اور بچے کی صحت.">
+<meta name="description" content="Best gynecologist in Rawalpindi, Islamabad & Gujar Khan. Pregnancy, infertility, women health, خواتین کے مسائل.">
+
+<!-- ✅ IMPORTANT: CSS LINKED -->
+<link rel="stylesheet" href="styles.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-<style>
-body { font-family: Inter; margin:0; }
-header { background:#0b5ed7; color:white; padding:15px; display:flex; justify-content:space-between; }
-.container { max-width:1100px; margin:auto; padding:20px; }
-.hero { text-align:center; padding:60px 20px; }
-button { padding:10px 20px; cursor:pointer; }
-.review { background:#f5f5f5; padding:15px; margin:10px 0; border-radius:8px; }
-.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6);}
-.modal-content { background:white; margin:10% auto; padding:20px; width:90%; max-width:400px; }
-</style>
-
 </head>
-<!-- Sticky Mobile CTA -->
-<div class="sticky-cta">
-    <a href="tel:03214414321" class="cta-btn call">
-        📞 <span data-en="Call" data-ur="کال کریں">Call</span>
-    </a>
 
-    <a href="https://wa.me/923225118889" target="_blank" class="cta-btn whatsapp">
-        💬 <span data-en="WhatsApp" data-ur="واٹس ایپ">WhatsApp</span>
-    </a>
-
-    <a href="#" onclick="openModal(event)" class="cta-btn book">
-        📅 <span data-en="Book" data-ur="بک کریں">Book</span>
-    </a>
-</div>
 <body>
 
-<header>
-<div>Dr. Umairah Yaqub</div>
-<div>
-<button onclick="setLang('en')">EN</button>
-<button onclick="setLang('ur')">اردو</button>
-<button onclick="openModal()">Book</button>
-</div>
+<!-- NAV -->
+<header class="navbar">
+    <div class="container nav-content">
+        <div class="logo">Dr. Umairah</div>
+
+        <div class="nav-links">
+            <a href="#about" data-en="Profile" data-ur="پروفائل">Profile</a>
+            <a href="#reviews" data-en="Reviews" data-ur="ریویوز">Reviews</a>
+        </div>
+
+        <button class="btn btn-primary" onclick="openModal(event)">
+            <span data-en="Book" data-ur="بک کریں">Book</span>
+        </button>
+
+        <div>
+            <button onclick="setLang('en')">EN</button>
+            <button onclick="setLang('ur')">اردو</button>
+        </div>
+    </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-<h1 data-en="Best Gynecologist in Rawalpindi, Islamabad & Gujar Khan"
-    data-ur="راولپنڈی، اسلام آباد اور گوجر خان کی بہترین گائناکالوجسٹ">
+<div class="container hero-container">
+
+<div>
+<h1 class="hero-title"
+data-en="Best Gynecologist in Rawalpindi, Islamabad & Gujar Khan"
+data-ur="راولپنڈی، اسلام آباد اور گوجر خان کی بہترین گائناکالوجسٹ">
 </h1>
 
-<p data-en="Pregnancy • Women Health • Female Issues"
-   data-ur="حمل • خواتین کی صحت • خواتین کے مسائل">
+<p class="hero-subtitle"
+data-en="Pregnancy • Women Health • Female Issues"
+data-ur="حمل • خواتین کی صحت • خواتین کے مسائل">
 </p>
 
-<button onclick="openModal()" data-en="Book Now" data-ur="اپائنٹمنٹ بک کریں"></button>
+<div class="hero-actions">
+<button class="btn btn-primary" onclick="openModal(event)">
+<span data-en="Book Appointment" data-ur="اپائنٹمنٹ بک کریں"></span>
+</button>
+</div>
+
+</div>
+
+</div>
 </section>
 
-<section class="container">
-<h2 data-en="Services" data-ur="خدمات"></h2>
-
-<ul>
-<li data-en="Pregnancy Care" data-ur="حمل کی دیکھ بھال"></li>
-<li data-en="Infertility Treatment" data-ur="بانجھ پن کا علاج"></li>
-<li data-en="Hormonal Issues" data-ur="ہارمون مسائل"></li>
-<li data-en="Women Health" data-ur="خواتین کی صحت"></li>
-</ul>
+<!-- ABOUT -->
+<section id="about" class="section">
+<div class="container">
+<h2 data-en="About Doctor" data-ur="ڈاکٹر کے بارے میں"></h2>
+<p data-en="18+ years of experience in gynecology and obstetrics."
+   data-ur="گائناکالوجی اور زچگی میں 18 سال سے زیادہ تجربہ۔">
+</p>
+</div>
 </section>
 
-<section class="container">
+<!-- REVIEWS -->
+<section id="reviews" class="section alt-bg">
+<div class="container">
 <h2 data-en="Patient Reviews" data-ur="مریضوں کی آراء"></h2>
 
-<div class="review"
-data-en="Best lady doctor in Rawalpindi."
-data-ur="راولپنڈی کی بہترین لیڈی ڈاکٹر۔"></div>
+<div class="review">⭐⭐⭐⭐⭐ <span data-en="Best doctor in Rawalpindi" data-ur="راولپنڈی کی بہترین ڈاکٹر"></span></div>
+<div class="review">⭐⭐⭐⭐⭐ <span data-en="Very experienced and kind" data-ur="بہت تجربہ کار اور مہربان"></span></div>
 
-<div class="review"
-data-en="Very experienced and kind doctor."
-data-ur="بہت تجربہ کار اور مہربان ڈاکٹر۔"></div>
-
+</div>
 </section>
 
-<!-- Modal -->
-<div id="modal" class="modal">
+<!-- MODAL -->
+<div id="bookingModal" class="modal-overlay">
 <div class="modal-content">
 
-<h3 data-en="Book Appointment" data-ur="اپائنٹمنٹ بک کریں"></h3>
+<div class="modal-header">
+<h2 data-en="Book Appointment" data-ur="اپائنٹمنٹ بک کریں"></h2>
+<button class="close-modal">X</button>
+</div>
 
-<form id="form">
+<div class="modal-body">
+<form id="bookingForm">
+
+<div class="form-group">
 <input type="text" id="name" placeholder="Name" required>
+</div>
+
+<div class="form-group">
 <input type="tel" id="phone" placeholder="Phone" required>
+</div>
 
-<select id="type">
-<option>Online</option>
-<option>Clinic</option>
-</select>
+<button class="btn btn-primary btn-block" type="submit">
+<span data-en="Continue" data-ur="جاری رکھیں"></span>
+</button>
 
-<textarea id="msg"></textarea>
-
-<button type="submit" data-en="Continue" data-ur="جاری رکھیں"></button>
 </form>
-
-<button onclick="closeModal()">X</button>
+</div>
 
 </div>
 </div>
 
+<!-- STICKY CTA -->
+<div class="sticky-cta">
+<a href="tel:03214414321" class="cta-btn call">📞 <span data-en="Call" data-ur="کال کریں"></span></a>
+<a href="https://wa.me/923225118889" class="cta-btn whatsapp">💬 <span data-en="WhatsApp" data-ur="واٹس ایپ"></span></a>
+<a href="#" onclick="openModal(event)" class="cta-btn book">📅 <span data-en="Book" data-ur="بک کریں"></span></a>
+</div>
+
+<!-- JS -->
 <script src="script.js"></script>
 
 </body>
