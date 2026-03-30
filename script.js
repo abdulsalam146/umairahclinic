@@ -23,13 +23,14 @@ setLang("en");
 // Modal
 const modal = document.getElementById("modal");
 
-function openModal() {
-    modal.style.display = "block";
-}
-
+window.openModal = (e) => {
+    if (e) e.preventDefault();
+    bookingModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+};
 function closeModal() {
     modal.style.display = "none";
-}
+};
 
 window.onclick = (e) => {
     if (e.target === modal) closeModal();
