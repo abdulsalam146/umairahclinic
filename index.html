@@ -1,149 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Best Female Gynecologist in Rawalpindi & Islamabad | Dr. Umairah Yaqub</title>
+    <meta name="description" content="Professor Dr. Umairah Yaqub: Senior Consultant Obstetrician & Gynecologist. Expert in C-Sections, Pregnancy care, and Infertility treatment in Rawalpindi, Islamabad, Gujar Khan, & Taxila.">
+    <meta name="keywords" content="Gynecologist Rawalpindi, Female Obstetrician Islamabad, C-section specialist, Pregnancy doctor Taxila, Infertility treatment Gujar Khan, Women health clinic Rawalpindi, Impotency treatment">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Dr Umairah Yaqub | Gynecologist Rawalpindi Islamabad Gujar Khan</title>
-
-<meta name="description" content="Best gynecologist in Rawalpindi, Islamabad & Gujar Khan. Pregnancy, infertility, women health, خواتین کے مسائل.">
-
-<!-- ✅ IMPORTANT: CSS LINKED -->
-<link rel="stylesheet" href="styles.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body>
-
-<!-- NAV -->
-<header class="navbar">
-    <div class="container nav-content">
-        <div class="logo">Dr. Umairah</div>
-
-        <div class="nav-links">
-            <a href="#about" data-en="Profile" data-ur="پروفائل">Profile</a>
-            <a href="#reviews" data-en="Reviews" data-ur="ریویوز">Reviews</a>
-        </div>
-
-        <button class="btn btn-primary" onclick="openModal(event)">
-            <span data-en="Book" data-ur="بک کریں">Book</span>
-        </button>
-
-        <div>
-            <button onclick="setLang('en')">EN</button>
-            <button onclick="setLang('ur')">اردو</button>
-        </div>
-    </div>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-<div class="container hero-container">
-
-<div>
-<h1 class="hero-title"
-data-en="Best Gynecologist in Rawalpindi, Islamabad & Gujar Khan"
-data-ur="راولپنڈی، اسلام آباد اور گوجر خان کی بہترین گائناکالوجسٹ">
-</h1>
-
-<p class="hero-subtitle"
-data-en="Pregnancy • Women Health • Female Issues"
-data-ur="حمل • خواتین کی صحت • خواتین کے مسائل">
-</p>
-
-<div class="hero-actions">
-<button class="btn btn-primary" onclick="openModal(event)">
-<span data-en="Book Appointment" data-ur="اپائنٹمنٹ بک کریں"></span>
-</button>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section id="about" class="section about-section">
-    <div class="container">
-
-        <div class="section-header text-center">
-            <h2 class="section-title"
-                data-en="Professional Profile"
-                data-ur="پروفیشنل پروفائل">
-            </h2>
-            <div class="divider"></div>
-        </div>
-
-        <div class="about-grid">
-
-            <!-- TEXT -->
-            <div class="about-text-content">
-                <p class="lead-text"
-                   data-en="18 years of clinical experience in Obstetrics & Gynecology."
-                   data-ur="زچگی اور خواتین کے امراض میں 18 سال کا تجربہ۔">
-                </p>
-
-                <p data-en="Expert in pregnancy, infertility, and women health."
-                   data-ur="حمل، بانجھ پن اور خواتین کی صحت کی ماہر۔">
-                </p>
+<body class="lang-en"> <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <i class="fa-solid fa-user-doctor"></i>
+                <span class="logo-text">Dr. Umairah Yaqub</span>
             </div>
-
-            <!-- IMAGE (ORIGINAL STYLE PRESERVED) -->
-            <div class="about-image-card">
-                <img 
-                    src="portrait.png" 
-                    alt="Dr Umairah Yaqub Portrait" 
-                    class="portrait-img"
-                    loading="lazy"
-                >
+            <nav class="nav-links">
+                <a href="#services"><span class="en">Services</span><span class="ur">خدمات</span></a>
+                <a href="#about"><span class="en">Profile</span><span class="ur">پروفائل</span></a>
+            </nav>
+            <div class="nav-actions">
+                <button id="langToggle" class="btn-lang">اردو</button>
+                <div id="calendar-button-target"></div>
             </div>
-
         </div>
+    </header>
 
-    </div>
-</section>
+    <section class="hero">
+        <div class="container">
+            <h1 class="en">Senior Consultant Gynecologist & Obstetrician</h1>
+            <h1 class="ur">سینئر کنسلٹنٹ ماہرِ امراضِ نسواں و زچگی</h1>
+            <p class="en">Expert medical care for women in Rawalpindi, Islamabad, Gujar Khan, and Taxila.</p>
+            <p class="ur">راولپنڈی، اسلام آباد، گوجر خان اور ٹیکسلا کی خواتین کے لیے ماہرانہ طبی دیکھ بھال۔</p>
+        </div>
+    </section>
 
-<!-- MODAL -->
-<div id="bookingModal" class="modal-overlay">
-<div class="modal-content">
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="en">Gynaecology & Obstetrics Services</h2>
+            <h2 class="ur">گائنی اور زچگی کی خدمات</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fa-solid fa-baby"></i>
+                    <h3 class="en">C-Section & Safe Delivery</h3>
+                    <h3 class="ur">سی سیکشن اور محفوظ زچگی</h3>
+                    <p class="en">Expert surgical (C-section) and painless natural delivery services for a safe motherhood journey.</p>
+                    <p class="ur">محفوظ زچگی کے لیے ماہرانہ جراحی (سی سیکشن) اور نارمل ڈلیوری کی خدمات۔</p>
+                </div>
 
-<div class="modal-header">
-<h2 data-en="Book Appointment" data-ur="اپائنٹمنٹ بک کریں"></h2>
-<button class="close-modal">X</button>
-</div>
+                <div class="service-card">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <h3 class="en">Regular Gynae Checkups</h3>
+                    <h3 class="ur">معمول کا معائنہ</h3>
+                    <p class="en">Routine antenatal appointments, ultrasound, and general women's health consultations.</p>
+                    <p class="ur">حمل کے دوران باقاعدہ معائنہ، الٹراساؤنڈ اور خواتین کی عام صحت کا مشورہ۔</p>
+                </div>
 
-<div class="modal-body">
-<form id="bookingForm">
+                <div class="service-card">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <h3 class="en">Infertility & Hormonal Health</h3>
+                    <h3 class="ur">بانجھ پن اور ہارمونل صحت</h3>
+                    <p class="en">Specialized treatment for infertility (impotency), PCOS, and hormonal imbalances.</p>
+                    <p class="ur">بانجھ پن، پی سی او ایس اور ہارمونل عدم توازن کا خصوصی علاج۔</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="form-group">
-<input type="text" id="name" placeholder="Name" required>
-</div>
+    <section class="appointment-section">
+        <div class="container">
+            <h2 class="en">Book Your Visit Online</h2>
+            <h2 class="ur">آن لائن اپائنٹمنٹ بک کریں</h2>
+            <div class="calendar-embed">
+                <iframe src="YOUR_GOOGLE_CALENDAR_URL" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+    </section>
 
-<div class="form-group">
-<input type="tel" id="phone" placeholder="Phone" required>
-</div>
-
-<button class="btn btn-primary btn-block" type="submit">
-<span data-en="Continue" data-ur="جاری رکھیں"></span>
-</button>
-
-</form>
-</div>
-
-</div>
-</div>
-
-<!-- STICKY CTA -->
-<div class="sticky-cta">
-<a href="tel:03214414321" class="cta-btn call">📞 <span data-en="Call" data-ur="کال کریں"></span></a>
-<a href="https://wa.me/923225118889" class="cta-btn whatsapp">💬 <span data-en="WhatsApp" data-ur="واٹس ایپ"></span></a>
-<a href="#" onclick="openModal(event)" class="cta-btn book">📅 <span data-en="Book" data-ur="بک کریں"></span></a>
-</div>
-
-<!-- JS -->
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
 </body>
 </html>
