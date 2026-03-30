@@ -1,7 +1,6 @@
 const WHATSAPP = "923225118889";
-const GOOGLE = "https://calendar.google.com/calendar/appointments/schedules/YOUR_LINK";
 
-// Language switch
+// Language toggle
 function setLang(lang) {
     document.querySelectorAll("[data-en]").forEach(el => {
         el.innerText = el.getAttribute(`data-${lang}`);
@@ -9,59 +8,52 @@ function setLang(lang) {
 
     document.documentElement.lang = lang;
 
-    // RTL for Urdu
     if (lang === "ur") {
-        document.body.style.direction = "rtl";
+        document.body.setAttribute("dir", "rtl");
     } else {
-        document.body.style.direction = "ltr";
+        document.body.setAttribute("dir", "ltr");
     }
 }
 
-// Default language
+// Default
 setLang("en");
 
 // Modal
-const modal = document.getElementById("modal");
+const bookingModal = document.getElementById('bookingModal');
 
 window.openModal = (e) => {
     if (e) e.preventDefault();
     bookingModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
 };
-function closeModal() {
-    modal.style.display = "none";
+
+document.querySelector('.close-modal').onclick = () => {
+    bookingModal.classList.remove('active');
 };
 
 window.onclick = (e) => {
-    if (e.target === modal) closeModal();
+    if (e.target === bookingModal) {
+        bookingModal.classList.remove('active');
+    }
 };
 
 // Form
-document.getElementById("form").addEventListener("submit", function(e){
+document.getElementById("bookingForm").addEventListener("submit", function(e){
     e.preventDefault();
 
     const name = document.getElementById("name").value;
     const phone = document.getElementById("phone").value;
-    const type = document.getElementById("type").value;
-    const msg = document.getElementById("msg").value;
 
-    const text = `Appointment:
+    const msg = `Appointment Request:
 Name: ${name}
-Phone: ${phone}
-Type: ${type}
-Message: ${msg}`;
+Phone: ${phone}`;
 
-    const encoded = encodeURIComponent(text);
-
-    if(confirm("OK = WhatsApp | Cancel = Calendar")){
-        window.open(`https://wa.me/${WHATSAPP}?text=${encoded}`, "_blank");
-    } else {
-        window.open(GOOGLE, "_blank");
-    }
+    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
 
     this.reset();
-    closeModal();
+    bookingModal.classList.remove('active');
 });
 
 // Auto popup
-setTimeout(openModal, 2000);
+setTimeout(() => {
+    openModal();
+}, 2000);
