@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Patient Education</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+.lang-ur { display:none; }
+body.urdu-active .lang-en { display:none !important; }
+body.urdu-active .lang-ur { display:block !important; direction:rtl; }
+body { font-family: Inter, sans-serif; }
+</style>
+</head>
+
+<body class="bg-gray-50">
+
+<!-- HEADER -->
+<header class="p-4 bg-white shadow flex justify-between">
+    <a href="index2.html">Clinic</a>
+
+    <button onclick="toggleLanguage()" class="border px-3 py-1 rounded">
+        <span class="lang-en">Urdu</span>
+        <span class="lang-ur">English</span>
+    </button>
+</header>
+
+<!-- TITLE -->
+<section class="p-6">
+    <h1 class="text-2xl font-bold lang-en">Patient Education</h1>
+    <h1 class="text-2xl font-bold lang-ur">مریضوں کی معلومات</h1>
+</section>
+
+<!-- FACEBOOK EMBED -->
+<section class="p-6 bg-white m-4 rounded shadow">
+
+    <div class="fb-page"
+        data-href="https://www.facebook.com/people/Umairahs-Gynae-Clinic/61574310422149/"
+        data-tabs="timeline"
+        data-width=""
+        data-height="800">
+    </div>
+
+</section>
+
+<!-- CONTACT CTA -->
+<section class="p-6 bg-rose-900 text-white text-center">
+
+    <p class="lang-en">Need Appointment?</p>
+    <p class="lang-ur">اپائنٹمنٹ چاہیے؟</p>
+
+    <a href="https://wa.me/923009555334"
+       class="mt-4 inline-block bg-white text-rose-900 px-5 py-3 rounded">
+        WhatsApp
+    </a>
+</section>
+
+<!-- FACEBOOK SDK -->
+<div id="fb-root"></div>
+<script async defer
+src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0">
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
